@@ -1,6 +1,5 @@
 ---
 title: "index"
-author: "Zaixin Gao, zg2582"
 date: "2026-11-04"
 output: html_document
 ---
@@ -14,9 +13,11 @@ Welcome to my website!
 I'm a master student at the Columbia University Mailman 
 School of Public Health studying Epidemiology and Biostatistics. I'm interested in writing, video games, bouldering, and I'm a big foodie!
 
-You can read about my research and work experience on my [resume](resume.html);
+You can read about my research and work experience on my [resume](resume.html).
 
-Or explore an interactive [dashboard](dashboard.html) I built with NOAA weather data!
+Or explore an interactive [dashboard](dashboard.html) I built with NOAA weather data.
+
+Feel free to reach out by email or connect with me on GitHub!
 
 <img src="images/IMG_5454.jpg" style="width:30%">
 
