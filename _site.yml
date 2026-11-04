@@ -1,0 +1,18 @@
+name: "zg2582"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "Resume"
+      href: resume.html
+    - text: "Dashboard"
+      href: dashboard.html
+    - text: "LinkedIn"
+      href: https://www.linkedin.com/in/zaixin-zai-gao-8a8156213/
+    - icon: fa-envelope fa-lg
+      href: mailto:zg20240714@gmail.com
+    - icon: fa-github fa-lg
+      href: http://github.com/Lorizai/
+output:
+  html_document:
+    theme: cerulean
