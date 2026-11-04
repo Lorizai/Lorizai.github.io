@@ -17,7 +17,7 @@ You can read about my research and work experience on my [resume](resume.html).
 
 Or explore an interactive [dashboard](dashboard.html) I built with NOAA weather data.
 
-Feel free to reach out by email or connect with me on GitHub!
+Feel free to reach out by email, LinkedIn or connect with me on GitHub!
 
 <img src="images/IMG_5454.jpg" style="width:30%">
 

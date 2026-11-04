@@ -1,0 +1,27 @@
+---
+title: "Resume"
+---
+
+## Education
+
+**Columbia University, Mailman School of Public Health**  
+*Master of Public Health in Epidemiology; Certificate in Applied Biostatistics and Public Health Data Science*, expected May 2027
+
+**New York University, Steinhardt School of Culture, Education, and Human Development**  
+*Bachelor of Science in Global Public Health/Media, Culture & Communication*, May 2024
+
+## Experience
+
+**Research Assistant**, Gertrude H. Sergievsky Center, Apr 2026 - Present
+
+Observational cohort study: metabolic syndrome and cognitive impairment onset in adults with Down syndrome (n=619, multi-center)
+
+**Research Assistant**, Columbia Aging Center, Oct 2025 - Present
+
+The National Longitudinal Study of Adolescent to Adult Health (~12,000 respondents)
+
+## Skills
+
+*   **Statistical Software:** R, SAS, SQL
+*   **Office & Visualization:** Excel, PowerPoint, Canva, Adobe Creative Suite, Tableau
+*   **Languages:** Mandarin (native), English (fluent)
