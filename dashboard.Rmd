@@ -1,35 +1,61 @@
 ---
-title: "NY NOAA Weather Dashboard"
-output: 
+title: "NY NOAA Weather Dashboard: New York City, 2010"
+output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
 ---
 
 ```{r setup, include=FALSE}
+library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
+library(plotly)
 
 data("ny_noaa")
 
-# How big is it? (expect about 2.6 million rows, 7 columns)
 nrow(ny_noaa)
 ncol(ny_noaa)
 
-# Date range: should be 1981-01-01 to 2010-12-31, matching the NOAA page
-min(pull(ny_noaa, date))
-max(pull(ny_noaa, date))
-
-
+nyc_weather_df =
+  ny_noaa |>
+  filter(id %in% c("USW00094728", "USW00094789", "USW00014732")) |>
+  separate(date, into = c("year", "month", "day"), sep = "-") |>
+  mutate(
+    year = as.numeric(year),
+    month = as.numeric(month),
+    day = as.numeric(day),
+    prcp = prcp / 10,
+    tmax = as.numeric(tmax) / 10,
+    tmin = as.numeric(tmin) / 10,
+    station = case_match(
+      id,
+      "USW00094728" ~ "Central Park",
+      "USW00094789" ~ "JFK",
+      "USW00014732" ~ "LaGuardia")) |>
+  filter(year == 2010)
 ```
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Daily Max vs. Min Temperature (°C), NYC stations, 2010
 
 ```{r}
-
+nyc_weather_df |>
+  filter(!is.na(tmax), !is.na(tmin)) |>
+  mutate(
+    `Min Temp (°C)` = tmin,
+    `Max Temp (°C)` = tmax,
+    text_label = str_c(
+      "Station: ", station,
+      "\nDate: ", year, "-", month, "-", day,
+      "\nMax temp: ", tmax, " °C",
+      "\nMin temp: ", tmin, " °C")) |>
+  plot_ly(
+    x = ~`Min Temp (°C)`, y = ~`Max Temp (°C)`,
+    type = "scatter", mode = "markers",
+    color = ~station, text = ~text_label, alpha = 0.5)
 ```
 
 Column {data-width=350}
