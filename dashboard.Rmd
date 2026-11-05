@@ -1,0 +1,49 @@
+---
+title: "NY NOAA Weather Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+
+data("ny_noaa")
+
+# How big is it? (expect about 2.6 million rows, 7 columns)
+nrow(ny_noaa)
+ncol(ny_noaa)
+
+# Date range: should be 1981-01-01 to 2010-12-31, matching the NOAA page
+min(pull(ny_noaa, date))
+max(pull(ny_noaa, date))
+
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
