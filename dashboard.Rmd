@@ -74,9 +74,16 @@ nyc_weather_df |>
     type = "box", colors = "viridis")
 ```
 
-### Chart C
+### Number of Days with Precipitation in 2010, By Station
 
 ```{r}
-
+nyc_weather_df |>
+  filter(prcp > 0) |>
+  count(station, name = "Days with Precipitation") |>
+  mutate(
+    Station = fct_reorder(station, `Days with Precipitation`)) |>
+  plot_ly(
+    x = ~Station, y = ~`Days with Precipitation`, color = ~Station,
+    type = "bar", colors = "viridis")
 ```
 
