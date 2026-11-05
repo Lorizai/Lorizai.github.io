@@ -61,10 +61,17 @@ nyc_weather_df |>
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Distribution of Daily Max Temperature (°C) by Month (1 = January), 2010
 
 ```{r}
-
+nyc_weather_df |>
+  filter(!is.na(tmax)) |>
+  mutate(
+    month = factor(month),
+    `Max Temp (°C)` = tmax) |>
+  plot_ly(
+    x = ~month, y = ~`Max Temp (°C)`, color = ~month,
+    type = "box", colors = "viridis")
 ```
 
 ### Chart C
